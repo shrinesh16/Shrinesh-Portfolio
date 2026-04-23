@@ -37,7 +37,7 @@ The entire source code lives in the `main` branch. You do not need to manually d
 3. GitHub Actions spins up a server, installs dependencies, runs `npm run build`, and automatically publishes the `dist` folder to the live website.
 
 ## 🛠️ Local Development  
-(juist in case you wanna copy mine 🤫)
+(just in case you wanna copy mine 🤫)
 
 To run this project locally on your machine:
 
