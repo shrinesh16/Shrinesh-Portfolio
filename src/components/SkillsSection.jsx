@@ -138,6 +138,9 @@ function SkillsSection() {
     if (!el) return;
 
     const handleMovement = (deltaY, e) => {
+      // Disable manual scroll hijacking on mobile devices so the page can scroll normally
+      if (window.innerWidth < 768) return;
+
       const current = scrollAccumulator.get();
       const next = current + deltaY;
 
