@@ -48,7 +48,7 @@ export default function App() {
 
       {/* TOP RIGHT HEADER (Location, Time, Resume) */}
       <div 
-        className="fixed top-4 right-4 md:top-8 md:right-10 flex flex-col items-end md:flex-row md:items-center gap-1 md:gap-4 z-[100]"
+        className="fixed top-4 right-4 md:top-8 md:right-10 flex flex-col items-end md:flex-row md:items-center gap-1 md:gap-4 z-[100] bg-black/40 md:bg-transparent backdrop-blur-md md:backdrop-blur-none p-2 md:p-0 rounded-lg"
         style={{
           color: '#e0e0e0',
           fontFamily: "system-ui, -apple-system, sans-serif",
@@ -104,7 +104,7 @@ export default function App() {
       <SocialDock />
 
       {/* HERO SECTION (3D CARD & ABOUT) */}
-      <div className="w-screen h-[100svh] relative flex flex-col md:flex-row items-center z-10 pt-[80px] md:pt-0">
+      <div className="w-screen min-h-[100svh] relative flex flex-col md:flex-row items-center z-10 pt-[100px] md:pt-0">
 
         {/* BORDER */}
         <div
@@ -114,7 +114,7 @@ export default function App() {
 
         {/* TYPED TEXT ON LEFT SIDE */}
         <div
-          className="fixed top-[20px] left-[16px] md:top-[24px] md:left-[32px] z-10 pointer-events-none"
+          className="absolute top-[30px] left-[16px] md:top-[24px] md:left-[32px] z-10 pointer-events-none"
           style={{
             color: '#00ff33f0',
             fontSize: '16px', // Smaller on mobile
@@ -138,7 +138,7 @@ export default function App() {
 
         {/* RIGHT SIDE: ABOUT SECTION */}
         <div 
-          className="w-full h-[45%] md:w-1/2 md:h-full flex flex-col justify-start md:justify-center px-6 md:pl-5 md:pr-20 z-[2]"
+          className="w-full h-auto md:w-1/2 md:h-full flex flex-col justify-start md:justify-center px-6 md:pl-5 md:pr-20 z-[2] pb-12 md:pb-0"
           style={{ fontFamily: "'JetBrains Mono', monospace" }}
         >
           <h2 className="text-[#00ff33f0] text-2xl md:text-[2.5rem] mb-4 md:mb-6 uppercase tracking-widest"
