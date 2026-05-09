@@ -270,7 +270,7 @@ function Band({maxSpeed = 50, minSpeed = 0, isMobile = false, cardTextureUrl}: B
                     useMap
                     map={texture}
                     repeat={[-4, 1]}
-                    lineWidth={0.5}
+                    lineWidth={0.3}
                 />
             </mesh>
         </>
