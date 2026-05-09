@@ -47,24 +47,22 @@ export default function App() {
       {/* 👆 minHeight creates scroll space */}
 
       {/* TOP RIGHT HEADER (Location, Time, Resume) */}
-      <div style={{
-        position: 'fixed',
-        top: '32px',
-        right: '40px',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '16px',
-        color: '#e0e0e0',
-        fontFamily: "system-ui, -apple-system, sans-serif",
-        fontSize: '16px',
-        zIndex: 100,
-        fontWeight: '400',
-        letterSpacing: '0.3px',
-      }}>
-        <span>Chennai, India</span>
-        <span style={{ fontSize: '10px', color: '#888' }}>●</span>
-        <span>{time}</span>
-        <div style={{ width: '1px', height: '20px', backgroundColor: '#444' }} />
+      <div 
+        className="fixed top-4 right-4 md:top-8 md:right-10 flex flex-col items-end md:flex-row md:items-center gap-1 md:gap-4 z-[100]"
+        style={{
+          color: '#e0e0e0',
+          fontFamily: "system-ui, -apple-system, sans-serif",
+          fontSize: '15px',
+          fontWeight: '400',
+          letterSpacing: '0.3px',
+        }}
+      >
+        <div className="flex items-center gap-2 md:gap-4">
+          <span>Chennai, India</span>
+          <span style={{ fontSize: '10px', color: '#888' }}>●</span>
+          <span>{time}</span>
+        </div>
+        <div className="hidden md:block" style={{ width: '1px', height: '20px', backgroundColor: '#444' }} />
         <a
           href="https://drive.google.com/file/d/1abuaj9Zj0AEF-t7_aBkwXxI8NReOiBOv/view?usp=sharing"
           target="_blank"
@@ -106,43 +104,31 @@ export default function App() {
       <SocialDock />
 
       {/* HERO SECTION (3D CARD & ABOUT) */}
-      <div style={{ width: '100vw', height: '100vh', position: 'relative', display: 'flex', alignItems: 'center', zIndex: 1 }}>
+      <div className="w-screen h-[100svh] relative flex flex-col md:flex-row items-center z-10 pt-[80px] md:pt-0">
 
         {/* BORDER */}
         <div
-          style={{
-            position: 'fixed',
-            inset: '14px',
-            border: '1.5px solid #00ff33f0',
-            zIndex: 10,
-            pointerEvents: 'none',
-            boxSizing: 'border-box',
-          }}
+          className="fixed inset-[8px] md:inset-[14px] pointer-events-none box-border z-10"
+          style={{ border: '1.5px solid #00ff33f0' }}
         />
 
         {/* TYPED TEXT ON LEFT SIDE */}
         <div
+          className="fixed top-[20px] left-[16px] md:top-[24px] md:left-[32px] z-10 pointer-events-none"
           style={{
-            position: 'fixed',
-            top: titlePosition.top,
-            left: titlePosition.left,
-            transform: titlePosition.transform,
-            textAlign: titlePosition.align,
-            zIndex: 10,
             color: '#00ff33f0',
-            fontSize: '20px',
+            fontSize: '16px', // Smaller on mobile
             fontWeight: 700,
             letterSpacing: '0.5px',
             fontFamily: "'JetBrains Mono', monospace",
-            pointerEvents: 'none',
           }}
         >
           <Typewriter text={"Hi, it's SHRINESH!\nThe Developer"} delay={60} />
         </div>
 
         {/* LEFT SIDE: 3D LANYARD CARD */}
-        <div style={{ width: '50%', height: '100%', position: 'relative', zIndex: 1 }}>
-          <div style={{ position: 'absolute', width: '150vw', height: '100%', left: '-50vw', top: 0 }}>
+        <div className="w-full h-[55%] md:w-1/2 md:h-full relative z-[1]">
+          <div className="absolute w-[150vw] h-full left-[-25vw] md:left-[-50vw] top-0">
             <Lanyard
               position={[0, 0, 13]}
               containerClassName="w-full h-full"
@@ -151,41 +137,24 @@ export default function App() {
         </div>
 
         {/* RIGHT SIDE: ABOUT SECTION */}
-        <div style={{
-          width: '50%',
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          padding: '0 80px 0 20px',
-          zIndex: 2,
-          fontFamily: "'JetBrains Mono', monospace"
-        }}>
-          <h2 style={{
-            color: '#00ff33f0',
-            fontSize: '2.5rem',
-            margin: '0 0 24px 0',
-            textShadow: '0 0 10px #00ff3380',
-            textTransform: 'uppercase',
-            letterSpacing: '2px',
-          }}>
+        <div 
+          className="w-full h-[45%] md:w-1/2 md:h-full flex flex-col justify-start md:justify-center px-6 md:pl-5 md:pr-20 z-[2]"
+          style={{ fontFamily: "'JetBrains Mono', monospace" }}
+        >
+          <h2 className="text-[#00ff33f0] text-2xl md:text-[2.5rem] mb-4 md:mb-6 uppercase tracking-widest"
+              style={{ textShadow: '0 0 10px #00ff3380' }}>
             About Me
           </h2>
-          <p style={{
-            color: '#ccc',
-            fontSize: '1.1rem',
-            lineHeight: '1.8',
-            margin: '0 0 20px 0',
-            animation: 'fadeIn 2s ease-out',
-          }}>
+          <p className="text-[#ccc] text-sm md:text-[1.1rem] leading-relaxed md:leading-[1.8] mb-5 md:mb-6"
+             style={{ animation: 'fadeIn 2s ease-out' }}>
             <span style={{ color: '#00ff33f0', fontWeight: 'bold' }}>I'm a developer and I create stuff like AI.</span>
             <br /><br />
             Passionate about building intelligent systems and robust architectures, I bridge the gap between machine learning research and practical software engineering. From creating computer vision applications for industrial defect detection to scaling web services, I bring ideas to life using a modern technology stack.
           </p>
-          <div style={{ display: 'flex', gap: '16px', marginTop: '20px' }}>
-            <div style={{ padding: '8px 16px', border: '1px solid #00ff3340', color: '#00ff33a0', fontSize: '0.9rem' }}>Machine Learning</div>
-            <div style={{ padding: '8px 16px', border: '1px solid #00ff3340', color: '#00ff33a0', fontSize: '0.9rem' }}>Full-Stack Web</div>
-            <div style={{ padding: '8px 16px', border: '1px solid #00ff3340', color: '#00ff33a0', fontSize: '0.9rem' }}>Cloud Architecture</div>
+          <div className="flex flex-wrap gap-3 mt-2 md:mt-5">
+            <div className="px-3 md:px-4 py-2 border border-[#00ff3340] text-[#00ff33a0] text-xs md:text-sm">Machine Learning</div>
+            <div className="px-3 md:px-4 py-2 border border-[#00ff3340] text-[#00ff33a0] text-xs md:text-sm">Full-Stack Web</div>
+            <div className="px-3 md:px-4 py-2 border border-[#00ff3340] text-[#00ff33a0] text-xs md:text-sm">Cloud Architecture</div>
           </div>
         </div>
 
@@ -212,18 +181,10 @@ export default function App() {
         </div>
 
         {/* FOOTER: SIGNATURE ON LEFT, GIF & BUTTONS ON RIGHT */}
-        <div style={{
-          marginTop: 'auto', // Pushes to the absolute bottom of the flex container
-          paddingTop: '60px',
-          paddingBottom: '25px',
-          width: '100%',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'flex-end',
-        }}>
+        <div className="w-full mt-auto pt-16 pb-6 flex flex-col-reverse md:flex-row justify-between items-center md:items-end gap-10 md:gap-0">
           
           {/* LEFT SIDE: SIGNATURE */}
-          <div style={{ marginLeft: '60px' /* Leaves space for social icons */ }}>
+          <div className="md:ml-[60px]">
             <img
               src={`${import.meta.env.BASE_URL}signature.png`}
               alt="Signature"

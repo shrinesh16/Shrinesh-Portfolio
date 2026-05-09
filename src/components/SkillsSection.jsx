@@ -196,11 +196,11 @@ function SkillsSection() {
 
       {/* ── Layer 5: Content ── */}
       <div
-        className="relative flex items-center w-full h-full mx-auto"
-        style={{ maxWidth: '1200px', zIndex: 10, padding: '0 40px' }}
+        className="relative flex flex-col md:flex-row items-center w-full h-full mx-auto pt-16 md:pt-0"
+        style={{ maxWidth: '1200px', zIndex: 10, padding: '0 24px' }}
       >
         {/* LEFT COLUMN */}
-        <div className="flex-1 flex flex-col justify-center h-full" style={{ paddingRight: '60px' }}>
+        <div className="flex-none md:flex-1 w-full md:w-auto h-[40%] md:h-full flex flex-col justify-center pr-0 md:pr-[60px] pb-4 md:pb-0">
           {/* Section label */}
           <span
             className="uppercase tracking-[3px] mb-4 block"
@@ -214,7 +214,7 @@ function SkillsSection() {
 
         {/* CENTER DIVIDER */}
         <div
-          className="flex-shrink-0"
+          className="hidden md:block flex-shrink-0"
           style={{
             width: '1px',
             height: '55vh',
@@ -225,7 +225,7 @@ function SkillsSection() {
         {/* RIGHT COLUMN */}
         <div 
           ref={rightColumnRef}
-          className="flex-1 relative flex items-center justify-center h-full cursor-ns-resize"
+          className="flex-1 w-full relative flex items-center justify-center h-[60%] md:h-full cursor-ns-resize"
           style={{ 
             WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%)',
             maskImage: 'linear-gradient(to bottom, transparent 0%, black 25%, black 75%, transparent 100%)'
