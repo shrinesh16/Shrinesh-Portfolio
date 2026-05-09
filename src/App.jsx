@@ -198,7 +198,7 @@ export default function App() {
           </div>
 
           {/* RIGHT SIDE: GIF & BUTTONS */}
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '16px' }}>
+          <div className="flex flex-col items-center md:items-end gap-4">
             <img
               src={`${import.meta.env.BASE_URL}animated_matrix.gif`}
               alt="Matrix Animation"
