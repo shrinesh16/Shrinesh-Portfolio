@@ -127,7 +127,7 @@ export default function App() {
         </div>
 
         {/* LEFT SIDE: 3D LANYARD CARD */}
-        <div className="w-full h-[55%] md:w-1/2 md:h-full relative z-[1]">
+        <div className="w-full h-[60svh] md:w-1/2 md:h-screen relative z-[1]">
           <div className="absolute w-[150vw] h-full left-[-25vw] md:left-[-50vw] top-0">
             <Lanyard
               position={[0, 0, 13]}
