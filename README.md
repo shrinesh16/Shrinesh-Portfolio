@@ -1,4 +1,5 @@
-# Shrinesh's Developer Portfolio 🚀
+# Shrinesh's 
+# Developer Portfolio 🛩️
 
 Welcome to my personal 3D interactive portfolio, featuring a physics-based interactive lanyard card and a modern, responsive user interface.
 
