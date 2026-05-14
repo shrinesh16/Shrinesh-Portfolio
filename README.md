@@ -39,6 +39,13 @@ The entire source code lives in the `main` branch. You do not need to manually d
 
 ## 🛠️ Local Development  
 (just in case you wanna copy mine 🤫)
+1. Take the .glb file which is the ID card's 3d model
+2. Open your blender application
+3. Go to uv edit section
+4. Create nodes in the bottom
+5. Select you desired image and hit enter
+   (if you have doubt about editing the card ask chat gpt for how to add my image ove this 3d-mode
+   and upluad the screen shot and these step i gave you it will tell how to edit use the steps or if you coudin't do it contact me)
 
 To run this project locally on your machine:
 
