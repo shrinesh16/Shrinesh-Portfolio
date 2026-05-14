@@ -63,4 +63,7 @@ To run this project locally on your machine:
 
 
 ## things need to be added
-
+1. connection
+2. project contributers
+3. link to projects
+4. linke to experience proof
