@@ -3,6 +3,7 @@ import Typewriter from './Typewriter'
 import Lanyard from './components/ui/lanyard'
 import SocialDock from './components/SocialDock'
 import SkillsSection from './components/SkillsSection'
+import CustomCursor from './components/CustomCursor'
 import { useState, useEffect } from 'react'
 
 // ─── PARTICLES ───────────────────────────────────────────────────────────────
@@ -44,6 +45,8 @@ export default function App() {
 
   return (
     <div style={{ width: '100%', minHeight: '200vh', position: 'relative' }}>
+      {/* Custom cursor */}
+      <CustomCursor />
       {/* 👆 minHeight creates scroll space */}
 
       {/* TOP RIGHT HEADER (Location, Time, Resume) */}
