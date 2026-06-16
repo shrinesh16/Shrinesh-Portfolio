@@ -2,7 +2,7 @@
 # Developer Portfolio 🛩️
 
 Welcome to my personal 3D interactive portfolio, featuring a physics-based interactive lanyard card and a modern, responsive user interface.
-showcasing my skills like 3d modeling and front end designing and potraing all my skills
+showcasing my skills like 3d modeling and front end designing and potraing all my skills with an intresting pointer design implemented
 
 ## 🌟 Live Website
 This project is automatically deployed and hosted via GitHub Pages. 
